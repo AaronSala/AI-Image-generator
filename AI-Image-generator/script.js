@@ -1,12 +1,13 @@
 const genereteForm = document.querySelector(".generate-form");
 const imageGallery = document.querySelector(".image-gallery");
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
 
 const updateImageCard = (imgDataArray) => {
   imgDataArray.forEach((imgObject, index) => {
     const imgCard = imageGallery.querySelectorAll(".img-card")[index];
     const imgElememnt = imgCard.querySelector("img");
+    const downloadBtn = imgCard.querySelector(".download-btn");
 
     //setting the ai generated image to images data
     const aiGeneratedImg = `data:image/jpeg;base64,${imgObject.b64_json}`;
@@ -15,6 +16,8 @@ const updateImageCard = (imgDataArray) => {
     //remove the oading when the image has finished loading
     imgElememnt.onload = () => {
       imgCard.classList.remove("loading");
+      downloadBtn.setAttribute("href", aiGeneratedImg);
+      downloadBtn.setAttribute("download", `${new Date().getTime()}.jpg`);
     };
   });
 };
