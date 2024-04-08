@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background: linear-gradient(45deg, #232123, #ee3232);
+   text-align: center;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+  height: 100vh;
+ 
+}
+.pagination{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.pagination .page:hover {
+    background: #aaa;
+    border-radius: 50%;
+
+}
+.pagination span {
+    margin: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    width: 3rem;
+    
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+    background-position: 0% -45%;
+    transition: background-position 1s;
+   
+}
+
+.pagination .page.active {
+    background: #ee3232;
+    border-radius: 50%;
+    color: #fff;
+    
+    background-position: 0% 100%;
+}
