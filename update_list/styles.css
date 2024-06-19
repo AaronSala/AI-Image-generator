@@ -1,0 +1,19 @@
+section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.container{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    align-items: start;
+}
+.disStudents{
+  
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    background-color: #999afe;
+}
